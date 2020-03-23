@@ -1,25 +1,20 @@
-var sun;
-var mercury;
-var venus;
-var earth;
-var mars;
+const Engine = Matter.Engine;
+const World= Matter.World;
+const Bodies = Matter.Bodies;
+
+var box1;
+var engine,world;
 
 function setup() {
-  createCanvas(400,400);
-
-  
+createCanvas(400,400);
+world = engin,world;
+engine = Engine.create(); 
+box1 = new Box(200,200,40,30);
 }
 
 function draw() {
-  background(255,255,255);
+  background(0);
+  Engine.update(engine);
 
-   var sun = circle(200,200,20);
-  var mercury = circle (250,250,10);
-  var venus = circle (150,280,10);
-  var earth = circle (200,300,10);
-  var mars = circle (250,350,10);
-
-
-
-  drawSprites();
+  box1.display();
 }
